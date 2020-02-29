@@ -12,7 +12,6 @@ nunjucks.configure("./", {
     noCache: true //boolean aceita 2 valores: true or false
 })
 
-
 // Lista de doadores: Vetor ou array
 const donors = [{
         name: "Diego Fernandes",
