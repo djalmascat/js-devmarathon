@@ -2,6 +2,13 @@
 const express = require("express")
 const server = express()
 
+//configurando a template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("./", {
+    express:server
+})
+
+
 // configurar a apresentação da página
 server.get("/", function (req, res) {
     return res.send("ok, cheguei aqui com nodemon")
