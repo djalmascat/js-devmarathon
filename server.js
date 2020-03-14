@@ -11,7 +11,6 @@ server.use(express.urlencoded({
 }))
 
 // configurar a conexão com o banco de dados
-
 const Pool = require("pg").Pool
 const db = new Pool({
     user: 'postgres',
@@ -54,7 +53,6 @@ server.post("/", function (req, res) {
 
     //colocar valores dentro do banco de dados
     const query = `INSERT INTO donors("name", "email", "blood") VALUES ($1, $2, $3)`
-
     const values = [name, email, blood]
 
     db.query(query, values, function (err) {
@@ -67,7 +65,6 @@ server.post("/", function (req, res) {
 
 
 })
-
 
 // ligar o servidor e permitir o acesso na porta 3000
 server.listen(3000, function () {
